@@ -1,0 +1,1529 @@
+<?xml version="1.0"?>
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:protege="http://protege.stanford.edu/plugins/owl/protege#"
+    xmlns:xsp="http://www.owl-ontologies.com/2005/08/07/xsp.owl#"
+    xmlns="http://www.owl-ontologies.com/Ontology1362056213.owl#"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+    xmlns:swrl="http://www.w3.org/2003/11/swrl#"
+    xmlns:swrlb="http://www.w3.org/2003/11/swrlb#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+  xml:base="http://www.epistematica.com/ontologies/DhiQar.owl">
+  <owl:Ontology rdf:about="">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >&lt;p style="margin-top: 0"&gt;
+      The DhiQar OWL Ontology project aims at proposing a new way to manage archaeological 
+      and epigraphic finds by developing a knowledge based cataloguing system.
+    &lt;/p&gt;</rdfs:comment>
+  </owl:Ontology>
+  <owl:Class rdf:ID="Seal">
+    <rdfs:comment xml:lang="it">&lt;p style="margin-top: 0"&gt;&#xD;
+      sigillo (oggetto usato per imprimere un marchio)&#xD;
+    &lt;/p&gt;</rdfs:comment>
+    <rdfs:comment xml:lang="en">object used to imprint a brand</rdfs:comment>
+    <rdfs:subClassOf>
+      <owl:Class>
+        <owl:unionOf rdf:parseType="Collection">
+          <owl:Class rdf:ID="Roller"/>
+          <owl:Class rdf:ID="Stamp"/>
+        </owl:unionOf>
+      </owl:Class>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="Find"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="HumanBeings">
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="AnthropomorphicBeings"/>
+    </rdfs:subClassOf>
+    <rdfs:comment xml:lang="it">&lt;p style="margin-top: 0"&gt;&#xD;
+      sigilli raffiguranti esseri umani&#xD;
+    &lt;/p&gt;</rdfs:comment>
+    <rdfs:comment xml:lang="en">seal depicting human beings</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:ID="MoonSymbol">
+    <rdfs:comment xml:lang="it">&lt;p style="margin-top: 0"&gt;&#xD;
+      sigilli raffiguranti il simbolo astrale della luna&#xD;
+    &lt;/p&gt;</rdfs:comment>
+    <rdfs:comment xml:lang="en">seal depicting the moon</rdfs:comment>
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="AstralSymbols"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="FingernailPrints">
+    <rdfs:comment xml:lang="it">&lt;p style="margin-top: 0"&gt;&#xD;
+      tavolette aventi impronte di unghie impresse sopra&#xD;
+    &lt;/p&gt;</rdfs:comment>
+    <rdfs:comment xml:lang="en">tablet having fringernail prints</rdfs:comment>
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="Tablet"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Copper">
+    <rdfs:comment xml:lang="it">&lt;p style="margin-top: 0"&gt;&#xD;
+      reperti in rame&#xD;
+    &lt;/p&gt;</rdfs:comment>
+    <rdfs:comment xml:lang="en">copper find</rdfs:comment>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#Find"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="FlatSquare">
+    <owl:disjointWith>
+      <owl:Class rdf:ID="Cone"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:ID="TruncatedCone"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:ID="Parallelepiped"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:ID="Label"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:ID="Cylinder"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#Stamp"/>
+    </owl:disjointWith>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#Find"/>
+    </rdfs:subClassOf>
+    <owl:disjointWith>
+      <owl:Class rdf:ID="FlatRectangle"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:ID="FlatCircle"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#Roller"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:ID="Prism"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:ID="Handle"/>
+    </owl:disjointWith>
+    <rdfs:comment xml:lang="en">flat square find</rdfs:comment>
+    <owl:disjointWith>
+      <owl:Class rdf:ID="Tag"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:ID="Barrel"/>
+    </owl:disjointWith>
+    <rdfs:comment xml:lang="it">&lt;p style="margin-top: 0"&gt;&#xD;
+      reperti a forma di tavoletta quadrata&#xD;
+    &lt;/p&gt;</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:ID="AnthropomorphicBeingsInTouchWitnAnthropomorphicBeings">
+    <rdfs:comment xml:lang="it">&lt;p style="margin-top: 0"&gt;&#xD;
+      sigilli raffiguranti esseri antropomorfi a contatto tra loro&#xD;
+    &lt;/p&gt;</rdfs:comment>
+    <rdfs:comment xml:lang="en">seal depicting anthropomorphic beings in touch with anthropomorphic beings</rdfs:comment>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#AnthropomorphicBeings"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="UnabradedSurface">
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="Text"/>
+    </rdfs:subClassOf>
+    <rdfs:comment xml:lang="it">&lt;p style="margin-top: 0"&gt;&#xD;
+      reperti contenenti testo aventi la superficie non abrasa&#xD;
+    &lt;/p&gt;</rdfs:comment>
+    <rdfs:comment xml:lang="en">find containing text having unabraded surface</rdfs:comment>
+    <owl:disjointWith>
+      <owl:Class rdf:ID="AbradedSurface"/>
+    </owl:disjointWith>
+  </owl:Class>
+  <owl:Class rdf:ID="SingleSealing">
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="Sealed"/>
+    </rdfs:subClassOf>
+    <rdfs:comment xml:lang="it">&lt;p style="margin-top: 0"&gt;&#xD;
+      reperti contenenti testo sigillati una volta sola&#xD;
+    &lt;/p&gt;</rdfs:comment>
+    <rdfs:comment xml:lang="en">find containing text with a single sealing</rdfs:comment>
+    <owl:disjointWith>
+      <owl:Class rdf:ID="MultipleSealing"/>
+    </owl:disjointWith>
+  </owl:Class>
+  <owl:Class rdf:ID="Animals">
+    <rdfs:comment xml:lang="it">&lt;p style="margin-top: 0"&gt;&#xD;
+      sigilli raffiguranti animali&#xD;
+    &lt;/p&gt;</rdfs:comment>
+    <rdfs:comment xml:lang="en">seal depicting animals</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="#Seal"/>
+  </owl:Class>
+  <owl:Class rdf:about="#Text">
+    <rdfs:comment xml:lang="it">&lt;p style="margin-top: 0"&gt;&#xD;
+      reperto contenente testo&#xD;
+    &lt;/p&gt;</rdfs:comment>
+    <rdfs:comment xml:lang="en">find containing text</rdfs:comment>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#Find"/>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Class>
+        <owl:unionOf rdf:parseType="Collection">
+          <owl:Class rdf:ID="Sumerian"/>
+          <owl:Class rdf:ID="Akkadian"/>
+          <owl:Class rdf:ID="Elamitic"/>
+          <owl:Class rdf:ID="OtherLanguages"/>
+        </owl:unionOf>
+      </owl:Class>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="#Label">
+    <owl:disjointWith>
+      <owl:Class rdf:about="#Parallelepiped"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#Cylinder"/>
+    </owl:disjointWith>
+    <owl:disjointWith rdf:resource="#FlatSquare"/>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#FlatRectangle"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#Tag"/>
+    </owl:disjointWith>
+    <rdfs:comment xml:lang="it">&lt;p style="margin-top: 0"&gt;&#xD;
+      reperti a forma piramidale&#xD;
+    &lt;/p&gt;</rdfs:comment>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#Cone"/>
+    </owl:disjointWith>
+    <rdfs:seeAlso xml:lang="en">pyramidal find</rdfs:seeAlso>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#Barrel"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#Stamp"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#TruncatedCone"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#Handle"/>
+    </owl:disjointWith>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#Find"/>
+    </rdfs:subClassOf>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#Prism"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#FlatCircle"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#Roller"/>
+    </owl:disjointWith>
+  </owl:Class>
+  <owl:Class rdf:ID="AnimalsInTouchWithMonster">
+    <rdfs:comment xml:lang="it">&lt;p style="margin-top: 0"&gt;&#xD;
+      sigilli raffiguranti animali in contatto con mostri (ovvero raffiguranti &#xD;
+      mostri in contatto con animali)&#xD;
+    &lt;/p&gt;</rdfs:comment>
+    <rdfs:comment xml:lang="en">seal depicting animals in touch with monsters (that is, seal depicting monsters in touch with animals)</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="#Animals"/>
+  </owl:Class>
+  <owl:Class rdf:about="#AnthropomorphicBeings">
+    <rdfs:comment xml:lang="it">&lt;p style="margin-top: 0"&gt;&#xD;
+      sigilli raffiguranti esseri antropomorfi&#xD;
+    &lt;/p&gt;</rdfs:comment>
+    <rdfs:comment xml:lang="en">seal depicting anthropomorphic beings</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="#Seal"/>
+  </owl:Class>
+  <owl:Class rdf:ID="SmoothCorners">
+    <rdfs:comment xml:lang="it">&lt;p style="margin-top: 0"&gt;&#xD;
+      tavolette aventi angoli smussati&#xD;
+    &lt;/p&gt;</rdfs:comment>
+    <rdfs:comment xml:lang="en">smooth corners tablet</rdfs:comment>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#Tablet"/>
+    </rdfs:subClassOf>
+    <owl:disjointWith>
+      <owl:Class rdf:ID="ClearCorners"/>
+    </owl:disjointWith>
+  </owl:Class>
+  <owl:Class rdf:about="#AstralSymbols">
+    <rdfs:subClassOf rdf:resource="#Seal"/>
+    <rdfs:comment xml:lang="en">seal depicting astral symbols</rdfs:comment>
+    <rdfs:comment xml:lang="it">&lt;p style="margin-top: 0"&gt;&#xD;
+      sigilli raffiguranti simboli astrali&#xD;
+    &lt;/p&gt;</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="#Roller">
+    <owl:disjointWith rdf:resource="#FlatSquare"/>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#FlatRectangle"/>
+    </owl:disjointWith>
+    <rdfs:comment xml:lang="it">&lt;p style="margin-top: 0"&gt;&#xD;
+      reperti a forma di rullo cilindrico&#xD;
+    &lt;/p&gt;</rdfs:comment>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#Stamp"/>
+    </owl:disjointWith>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#Find"/>
+    </rdfs:subClassOf>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#Tag"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#FlatCircle"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#TruncatedCone"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#Barrel"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#Cylinder"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#Cone"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#Prism"/>
+    </owl:disjointWith>
+    <owl:disjointWith rdf:resource="#Label"/>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#Parallelepiped"/>
+    </owl:disjointWith>
+    <rdfs:comment xml:lang="en">cylindrical roller find</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="#Tablet">
+    <rdfs:subClassOf>
+      <owl:Class>
+        <owl:unionOf rdf:parseType="Collection">
+          <owl:Class rdf:about="#FlatSquare"/>
+          <owl:Class rdf:about="#FlatRectangle"/>
+          <owl:Class rdf:about="#FlatCircle"/>
+        </owl:unionOf>
+      </owl:Class>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf rdf:resource="#Text"/>
+    <rdfs:comment xml:lang="it">&lt;p style="margin-top: 0"&gt;&#xD;
+      tavolette (forma schiacciata)&#xD;
+    &lt;/p&gt;</rdfs:comment>
+    <rdfs:comment xml:lang="en">flat tablet</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:ID="DivineBeings">
+    <rdfs:subClassOf rdf:resource="#AnthropomorphicBeings"/>
+    <rdfs:comment xml:lang="it">&lt;p style="margin-top: 0"&gt;&#xD;
+      sigilli raffiguranti esseri divini&#xD;
+    &lt;/p&gt;</rdfs:comment>
+    <rdfs:comment xml:lang="en">seal depicting divine beings</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:ID="OnBendedKneeCharacter">
+    <rdfs:comment xml:lang="it">&lt;p style="margin-top: 0"&gt;&#xD;
+      sigilli raffiguranti almeno un essere antropomorfo in ginocchio&#xD;
+    &lt;/p&gt;</rdfs:comment>
+    <rdfs:comment xml:lang="en">seal depicting at least one anthropomorphic being on bended knee</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="#AnthropomorphicBeings"/>
+  </owl:Class>
+  <owl:Class rdf:about="#Akkadian">
+    <rdfs:subClassOf rdf:resource="#Text"/>
+    <rdfs:comment xml:lang="it">&lt;p style="margin-top: 0"&gt;&#xD;
+      reperti contenenti testo in lingua accadica&#xD;
+    &lt;/p&gt;</rdfs:comment>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >find containing text in akkadian language</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="#Handle">
+    <owl:disjointWith>
+      <owl:Class rdf:about="#Barrel"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#Stamp"/>
+    </owl:disjointWith>
+    <owl:disjointWith rdf:resource="#Label"/>
+    <rdfs:comment xml:lang="en">cylindrical roller find, with support</rdfs:comment>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#FlatRectangle"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#Parallelepiped"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#Cone"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#FlatCircle"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#Prism"/>
+    </owl:disjointWith>
+    <rdfs:comment xml:lang="it">&lt;p style="margin-top: 0"&gt;&#xD;
+      reperti a forma di rullo cilindrico con supporto&#xD;
+    &lt;/p&gt;</rdfs:comment>
+    <owl:disjointWith rdf:resource="#FlatSquare"/>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#Tag"/>
+    </owl:disjointWith>
+    <rdfs:subClassOf rdf:resource="#Roller"/>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#Cylinder"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#TruncatedCone"/>
+    </owl:disjointWith>
+  </owl:Class>
+  <owl:Class rdf:ID="VegetalElementsInTouchWithMonsters">
+    <rdfs:comment xml:lang="it">&lt;p style="margin-top: 0"&gt;&#xD;
+      sigilli raffiguranti elementi vegetali in contatto con mostri (ovvero &#xD;
+      raffiguranti mostri in contatto con elementi vegetali)&#xD;
+    &lt;/p&gt;</rdfs:comment>
+    <rdfs:comment xml:lang="en">seal depicting vegetal elements in touch with monsters (that is, seal depicting monsters in touch with vegetal elements)</rdfs:comment>
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="VegetalElements"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="#Tag">
+    <rdfs:comment xml:lang="en">ovoid find</rdfs:comment>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#TruncatedCone"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#Prism"/>
+    </owl:disjointWith>
+    <owl:disjointWith rdf:resource="#Handle"/>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#Stamp"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#Barrel"/>
+    </owl:disjointWith>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#Find"/>
+    </rdfs:subClassOf>
+    <owl:disjointWith rdf:resource="#FlatSquare"/>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#Cylinder"/>
+    </owl:disjointWith>
+    <rdfs:comment xml:lang="it">&lt;p style="margin-top: 0"&gt;&#xD;
+      reperti a forma ovoidale&#xD;
+    &lt;/p&gt;</rdfs:comment>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#Cone"/>
+    </owl:disjointWith>
+    <owl:disjointWith rdf:resource="#Roller"/>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#FlatRectangle"/>
+    </owl:disjointWith>
+    <owl:disjointWith rdf:resource="#Label"/>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#FlatCircle"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#Parallelepiped"/>
+    </owl:disjointWith>
+  </owl:Class>
+  <owl:Class rdf:about="#Elamitic">
+    <rdfs:subClassOf rdf:resource="#Text"/>
+    <rdfs:comment xml:lang="it">&lt;p style="margin-top: 0"&gt;&#xD;
+      reperti contenenti testo in lingua elamita&#xD;
+    &lt;/p&gt;</rdfs:comment>
+    <rdfs:comment xml:lang="en">find containing text in elamitic language</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:ID="Bronze">
+    <rdfs:comment xml:lang="en">bronze find</rdfs:comment>
+    <rdfs:comment xml:lang="it">&lt;p style="margin-top: 0"&gt;&#xD;
+      reperti in bronzo&#xD;
+    &lt;/p&gt;</rdfs:comment>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#Find"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="CharactersWithSameHeading">
+    <rdfs:subClassOf rdf:resource="#AnthropomorphicBeings"/>
+    <rdfs:comment xml:lang="it">&lt;p style="margin-top: 0"&gt;&#xD;
+      sigilli raffiguranti piu' di tre esseri antropomorfi rivolti nella &#xD;
+      stessa direzione&#xD;
+    &lt;/p&gt;</rdfs:comment>
+    <rdfs:comment xml:lang="en">seal depicting more than three anthropomorphic beings facing the same direction</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="#Prism">
+    <owl:disjointWith rdf:resource="#Tag"/>
+    <owl:disjointWith rdf:resource="#Label"/>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#TruncatedCone"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#FlatRectangle"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#Barrel"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#Cylinder"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#FlatCircle"/>
+    </owl:disjointWith>
+    <rdfs:comment xml:lang="en">prism find</rdfs:comment>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#Stamp"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#Parallelepiped"/>
+    </owl:disjointWith>
+    <owl:disjointWith rdf:resource="#Roller"/>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#Find"/>
+    </rdfs:subClassOf>
+    <rdfs:comment xml:lang="it">&lt;p style="margin-top: 0"&gt;&#xD;
+      reperti a forma di prisma&#xD;
+    &lt;/p&gt;</rdfs:comment>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#Cone"/>
+    </owl:disjointWith>
+    <owl:disjointWith rdf:resource="#Handle"/>
+    <owl:disjointWith rdf:resource="#FlatSquare"/>
+  </owl:Class>
+  <owl:Class rdf:ID="MeansOfTransportation">
+    <rdfs:comment xml:lang="it">&lt;p style="margin-top: 0"&gt;&#xD;
+      sigilli raffiguranti mezzi di trasporto (non animati)&#xD;
+    &lt;/p&gt;</rdfs:comment>
+    <rdfs:comment xml:lang="en">seal depicting non animated means of transportation</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="#Seal"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Furnitures">
+    <rdfs:subClassOf rdf:resource="#Seal"/>
+    <rdfs:comment xml:lang="it">&lt;p style="margin-top: 0"&gt;&#xD;
+      sigilli raffiguranti arredi&#xD;
+    &lt;/p&gt;</rdfs:comment>
+    <rdfs:comment xml:lang="en">seal depicting furnitures</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:ID="CharactersWithOppositeHeading">
+    <rdfs:comment xml:lang="it">&lt;p style="margin-top: 0"&gt;&#xD;
+      sigilli raffiguranti almeno due personaggi che si danno le spalle &#xD;
+      (considerandola rappresentazione del corpo e non della testa, che in &#xD;
+      alcuni casi puo' essere rappresentata frontalmente)&#xD;
+    &lt;/p&gt;</rdfs:comment>
+    <rdfs:comment xml:lang="en">seal depicting at least two characters in the opposite direction (taking into account the body and not the head representation, which in some cases can be frontally depicted)</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="#AnthropomorphicBeings"/>
+  </owl:Class>
+  <owl:Class rdf:about="#Sumerian">
+    <rdfs:comment xml:lang="it">&lt;p style="margin-top: 0"&gt;&#xD;
+      reperti contenenti testo in lingua sumerica&#xD;
+    &lt;/p&gt;</rdfs:comment>
+    <rdfs:comment xml:lang="en">find containing text in sumerian language</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="#Text"/>
+  </owl:Class>
+  <owl:Class rdf:about="#OtherLanguages">
+    <rdfs:comment xml:lang="it">&lt;p style="margin-top: 0"&gt;&#xD;
+      reperti contenenti testo in una lingua diversa da sumerico, accadico ed &#xD;
+      elamita&#xD;
+    &lt;/p&gt;</rdfs:comment>
+    <rdfs:comment xml:lang="en">find containing text in a language other than sumerian, akkadian and elamitic</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="#Text"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Undamaged">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#Find"/>
+    </rdfs:subClassOf>
+    <rdfs:comment xml:lang="it">&lt;p style="margin-top: 0"&gt;&#xD;
+      reperto integro&#xD;
+    &lt;/p&gt;</rdfs:comment>
+    <rdfs:comment xml:lang="en">undamaged find</rdfs:comment>
+    <owl:disjointWith>
+      <owl:Class rdf:ID="Damaged"/>
+    </owl:disjointWith>
+  </owl:Class>
+  <owl:Class rdf:ID="Wood">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#Find"/>
+    </rdfs:subClassOf>
+    <rdfs:comment xml:lang="en">wooden find</rdfs:comment>
+    <rdfs:comment xml:lang="it">&lt;p style="margin-top: 0"&gt;&#xD;
+      reperti in legno&#xD;
+    &lt;/p&gt;</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="#Cone">
+    <owl:disjointWith>
+      <owl:Class rdf:about="#Stamp"/>
+    </owl:disjointWith>
+    <owl:disjointWith rdf:resource="#Tag"/>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#Cylinder"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#FlatRectangle"/>
+    </owl:disjointWith>
+    <owl:disjointWith rdf:resource="#Prism"/>
+    <owl:disjointWith rdf:resource="#FlatSquare"/>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#Find"/>
+    </rdfs:subClassOf>
+    <owl:disjointWith rdf:resource="#Handle"/>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#TruncatedCone"/>
+    </owl:disjointWith>
+    <rdfs:comment xml:lang="en">cone find</rdfs:comment>
+    <owl:disjointWith rdf:resource="#Roller"/>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#FlatCircle"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#Parallelepiped"/>
+    </owl:disjointWith>
+    <rdfs:comment xml:lang="it">&lt;p style="margin-top: 0"&gt;&#xD;
+      reperti a forma di cono&#xD;
+    &lt;/p&gt;</rdfs:comment>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#Barrel"/>
+    </owl:disjointWith>
+    <owl:disjointWith rdf:resource="#Label"/>
+  </owl:Class>
+  <owl:Class rdf:about="#Damaged">
+    <rdfs:comment xml:lang="it">&lt;p style="margin-top: 0"&gt;&#xD;
+      reperto non integro&#xD;
+    &lt;/p&gt;</rdfs:comment>
+    <rdfs:comment xml:lang="en">damaged find</rdfs:comment>
+    <owl:disjointWith rdf:resource="#Undamaged"/>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#Find"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="MonstersInTouchWithAnthropomorphicBeings">
+    <rdfs:comment xml:lang="it">&lt;p style="margin-top: 0"&gt;&#xD;
+      sigilli raffiguranti mostri in contatto con esseri antropomorfi (ovvero &#xD;
+      raffiguranti esseri antropomorfi in contatto con mostri)&#xD;
+    &lt;/p&gt;</rdfs:comment>
+    <rdfs:comment xml:lang="en">seal depicting monsters in touch with anthropomorphic beings (that is, seal depicting anthropomorphic beings in touch with monsters)</rdfs:comment>
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="Monsters"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="VegetalElementsInTouchWithAnimals">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#VegetalElements"/>
+    </rdfs:subClassOf>
+    <rdfs:comment xml:lang="it">&lt;p style="margin-top: 0"&gt;&#xD;
+      sigilli raffiguranti elementi vegetali in contatto con animali (ovvero &#xD;
+      raffiguranti animali in contatto con elementi vegetali)&#xD;
+    &lt;/p&gt;</rdfs:comment>
+    <rdfs:comment xml:lang="en">seal depicting vegetal elements in touch with animals (that is, seal depicting animals in touch with vegetal elements)</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:ID="SealedAfterInscribing">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#Sealed"/>
+    </rdfs:subClassOf>
+    <rdfs:comment xml:lang="it">&lt;p style="margin-top: 0"&gt;&#xD;
+      reperti contenenti testo sigillati dopo essere stati scritti&#xD;
+    &lt;/p&gt;</rdfs:comment>
+    <rdfs:comment xml:lang="en">find containing text sealed after inscribing</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:ID="DifferentCurvatures">
+    <owl:disjointWith>
+      <owl:Class rdf:ID="SameCurvature"/>
+    </owl:disjointWith>
+    <rdfs:comment xml:lang="it">&lt;p style="margin-top: 0"&gt;&#xD;
+      tavolette aventi differenti bombature tra recto e verso (i.e., &#xD;
+      dritto-bombato o bombato-dritto)&#xD;
+    &lt;/p&gt;</rdfs:comment>
+    <rdfs:comment xml:lang="en">tablet with different curvatures between recto and verso (i.e., right-convex or convex-right)</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="#Tablet"/>
+  </owl:Class>
+  <owl:Class rdf:about="#MultipleSealing">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#Sealed"/>
+    </rdfs:subClassOf>
+    <owl:disjointWith rdf:resource="#SingleSealing"/>
+    <rdfs:comment xml:lang="it">&lt;p style="margin-top: 0"&gt;&#xD;
+      reperti contenenti testo sigillati piu' volte con sigilli diversi (due &#xD;
+      sigillature uguali valgono come una singola sigillatura)&#xD;
+    &lt;/p&gt;</rdfs:comment>
+    <rdfs:comment xml:lang="en">finding containing text with a multiple sealing (two equal seals are the same of one seal)</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:ID="AnimalsInSequence">
+    <rdfs:subClassOf rdf:resource="#Animals"/>
+    <rdfs:comment xml:lang="it">&lt;p style="margin-top: 0"&gt;&#xD;
+      sigilli raffiguranti animali in successione&#xD;
+    &lt;/p&gt;</rdfs:comment>
+    <rdfs:comment xml:lang="en">seal depicting animals in sequence</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="#TruncatedCone">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#Find"/>
+    </rdfs:subClassOf>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#FlatCircle"/>
+    </owl:disjointWith>
+    <owl:disjointWith rdf:resource="#Roller"/>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#Parallelepiped"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#FlatRectangle"/>
+    </owl:disjointWith>
+    <rdfs:comment xml:lang="en">truncated cone find</rdfs:comment>
+    <owl:disjointWith rdf:resource="#Handle"/>
+    <owl:disjointWith rdf:resource="#FlatSquare"/>
+    <owl:disjointWith rdf:resource="#Cone"/>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#Cylinder"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#Barrel"/>
+    </owl:disjointWith>
+    <owl:disjointWith rdf:resource="#Tag"/>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#Stamp"/>
+    </owl:disjointWith>
+    <rdfs:comment xml:lang="it">&lt;p style="margin-top: 0"&gt;&#xD;
+      reperti a forma di tronco di cono&#xD;
+    &lt;/p&gt;</rdfs:comment>
+    <owl:disjointWith rdf:resource="#Prism"/>
+    <owl:disjointWith rdf:resource="#Label"/>
+  </owl:Class>
+  <owl:Class rdf:ID="SideBordersInscribed">
+    <rdfs:subClassOf rdf:resource="#Tablet"/>
+    <rdfs:comment xml:lang="it">&lt;p style="margin-top: 0"&gt;&#xD;
+      tavolette in cui e' presente del testo sui bordi laterali&#xD;
+    &lt;/p&gt;</rdfs:comment>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >tablet with text along the side borders</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:ID="AnimalsInHeraldicMotif">
+    <rdfs:subClassOf rdf:resource="#Animals"/>
+    <rdfs:comment xml:lang="it">&lt;p style="margin-top: 0"&gt;&#xD;
+      sigilli raffiguranti animali in motivo araldico&#xD;
+    &lt;/p&gt;</rdfs:comment>
+    <rdfs:comment xml:lang="en">seal depicting animals in heraldic motif</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:ID="BrokenEpigraphicDating">
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+          <owl:Class rdf:about="#Text"/>
+          <owl:Restriction>
+            <owl:onProperty>
+              <owl:DatatypeProperty rdf:ID="epigraphicDating"/>
+            </owl:onProperty>
+            <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+            >3</owl:maxCardinality>
+          </owl:Restriction>
+        </owl:intersectionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+    <rdfs:comment xml:lang="it">&lt;p style="margin-top: 0"&gt;&#xD;
+      tavolette aventi la datazione epigrafica rotta&#xD;
+    &lt;/p&gt;</rdfs:comment>
+    <rdfs:comment xml:lang="en">tablet with broken epigraphic dating</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:ID="Silver">
+    <rdfs:comment xml:lang="it">&lt;p style="margin-top: 0"&gt;&#xD;
+      reperti in argento&#xD;
+    &lt;/p&gt;</rdfs:comment>
+    <rdfs:comment xml:lang="en">silver find</rdfs:comment>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#Find"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Administrative">
+    <rdfs:subClassOf rdf:resource="#Text"/>
+    <rdfs:comment xml:lang="it">&lt;p style="margin-top: 0"&gt;&#xD;
+      genere di reperti scritti, in base al carattere del testo &#xD;
+    &lt;/p&gt;</rdfs:comment>
+    <rdfs:comment xml:lang="en">kind of written find</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="#Monsters">
+    <rdfs:subClassOf rdf:resource="#Seal"/>
+    <rdfs:comment xml:lang="it">&lt;p style="margin-top: 0"&gt;&#xD;
+      sigilli raffiguranti mostri (esseri formati da diverse parti di animali)&#xD;
+    &lt;/p&gt;</rdfs:comment>
+    <rdfs:comment xml:lang="en">seal depicting monsters ( beings formed from different parts of animals)</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:ID="Legal">
+    <rdfs:subClassOf>
+      <owl:Class>
+        <owl:unionOf rdf:parseType="Collection">
+          <owl:Class rdf:about="#Administrative"/>
+          <owl:Class rdf:ID="Historical"/>
+          <owl:Class rdf:ID="Scholastic"/>
+        </owl:unionOf>
+      </owl:Class>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf rdf:resource="#Text"/>
+    <rdfs:comment xml:lang="it">&lt;p style="margin-top: 0"&gt;&#xD;
+      generi di reperto scritto, in base al carattere del testo &#xD;
+    &lt;/p&gt;</rdfs:comment>
+    <rdfs:comment xml:lang="en">kind of written find</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="#VegetalElements">
+    <rdfs:comment xml:lang="it">&lt;p style="margin-top: 0"&gt;&#xD;
+      sigilli raffiguranti elementi vegetali&#xD;
+    &lt;/p&gt;</rdfs:comment>
+    <rdfs:comment xml:lang="en">seal depicting vegetal elements</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="#Seal"/>
+  </owl:Class>
+  <owl:Class rdf:ID="SealedBeforeInscribing">
+    <rdfs:comment xml:lang="it">&lt;p style="margin-top: 0"&gt;&#xD;
+      reperti contenenti testo sigillati prima di essere stati scritti&#xD;
+    &lt;/p&gt;</rdfs:comment>
+    <rdfs:comment xml:lang="en">find containing text sealed before inscribing</rdfs:comment>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#Sealed"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="BendedLegCharacter">
+    <rdfs:subClassOf rdf:resource="#AnthropomorphicBeings"/>
+    <rdfs:comment xml:lang="it">&lt;p style="margin-top: 0"&gt;&#xD;
+      sigilli raffiguranti almeno un essere antropomorfo con almeno una delle &#xD;
+      due gambe piegata&#xD;
+    &lt;/p&gt;</rdfs:comment>
+    <rdfs:comment xml:lang="en">seal depicting at least one anthropomorphic being with at least one bended leg</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:ID="Iron">
+    <rdfs:comment xml:lang="it">&lt;p style="margin-top: 0"&gt;&#xD;
+      reperti in ferro&#xD;
+    &lt;/p&gt;</rdfs:comment>
+    <rdfs:comment xml:lang="en">iron find</rdfs:comment>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#Find"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="#Cylinder">
+    <owl:disjointWith rdf:resource="#Label"/>
+    <rdfs:comment xml:lang="it">&lt;p style="margin-top: 0"&gt;&#xD;
+      reperti a forma di cilindro&#xD;
+    &lt;/p&gt;</rdfs:comment>
+    <owl:disjointWith rdf:resource="#FlatSquare"/>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#FlatCircle"/>
+    </owl:disjointWith>
+    <owl:disjointWith rdf:resource="#Tag"/>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#FlatRectangle"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#Stamp"/>
+    </owl:disjointWith>
+    <owl:disjointWith rdf:resource="#Prism"/>
+    <owl:disjointWith rdf:resource="#Handle"/>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#Parallelepiped"/>
+    </owl:disjointWith>
+    <owl:disjointWith rdf:resource="#Roller"/>
+    <owl:disjointWith rdf:resource="#Cone"/>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#Barrel"/>
+    </owl:disjointWith>
+    <rdfs:comment xml:lang="en">cylindrical find</rdfs:comment>
+    <owl:disjointWith rdf:resource="#TruncatedCone"/>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#Find"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="#Historical">
+    <rdfs:subClassOf rdf:resource="#Text"/>
+    <rdfs:comment xml:lang="it">&lt;p style="margin-top: 0"&gt;&#xD;
+      genere di reperto scritto, in base al carattere del testo &#xD;
+    &lt;/p&gt;</rdfs:comment>
+    <rdfs:comment xml:lang="en">kind of written find</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:ID="ArchitectonicElements">
+    <rdfs:subClassOf rdf:resource="#Seal"/>
+    <rdfs:comment xml:lang="it">&lt;p style="margin-top: 0"&gt;&#xD;
+      sigilli raffiguranti elementi architettonici&#xD;
+    &lt;/p&gt;</rdfs:comment>
+    <rdfs:comment xml:lang="en">seal depicting architectonic elements</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="#Sealed">
+    <rdfs:comment xml:lang="it">&lt;p style="margin-top: 0"&gt;&#xD;
+      reperti contenenti testo che presentano il marchio di un sigillo&#xD;
+    &lt;/p&gt;</rdfs:comment>
+    <rdfs:comment xml:lang="en">find containing text with the seal mark</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="#Text"/>
+  </owl:Class>
+  <owl:Class rdf:about="#Find">
+    <rdfs:comment xml:lang="it">&lt;p style="margin-top: 0"&gt;&#xD;
+      reperto archeologico&#xD;
+    &lt;/p&gt;</rdfs:comment>
+    <rdfs:comment xml:lang="en">archaeological find</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="#Scholastic">
+    <rdfs:subClassOf rdf:resource="#Text"/>
+    <rdfs:comment xml:lang="it">&lt;p style="margin-top: 0"&gt;&#xD;
+      genere di reperto scritto, in base al carattere del testo &#xD;
+    &lt;/p&gt;</rdfs:comment>
+    <rdfs:comment xml:lang="en">kind of written find</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:ID="ReducedScaleCharacter">
+    <rdfs:comment xml:lang="it">&lt;p style="margin-top: 0"&gt;&#xD;
+      sigilli raffiguranti almeno un essere antropomorfo raffigurato in scala &#xD;
+      ridotta&#xD;
+    &lt;/p&gt;</rdfs:comment>
+    <rdfs:comment xml:lang="en">seal depicting at least one anthropomorphic being in a reduced scale</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="#AnthropomorphicBeings"/>
+  </owl:Class>
+  <owl:Class rdf:about="#FlatRectangle">
+    <owl:disjointWith rdf:resource="#Cone"/>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#Parallelepiped"/>
+    </owl:disjointWith>
+    <rdfs:comment xml:lang="it">&lt;p style="margin-top: 0"&gt;&#xD;
+      reperti a forma di tavoletta rettangolare&#xD;
+    &lt;/p&gt;</rdfs:comment>
+    <owl:disjointWith rdf:resource="#Cylinder"/>
+    <owl:disjointWith rdf:resource="#Tag"/>
+    <owl:disjointWith rdf:resource="#FlatSquare"/>
+    <owl:disjointWith rdf:resource="#Label"/>
+    <rdfs:comment xml:lang="en">flat rectangle find</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="#Find"/>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#Stamp"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#FlatCircle"/>
+    </owl:disjointWith>
+    <owl:disjointWith rdf:resource="#TruncatedCone"/>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#Barrel"/>
+    </owl:disjointWith>
+    <owl:disjointWith rdf:resource="#Prism"/>
+    <owl:disjointWith rdf:resource="#Roller"/>
+    <owl:disjointWith rdf:resource="#Handle"/>
+  </owl:Class>
+  <owl:Class rdf:ID="MythicalCreturesOrDemons">
+    <rdfs:comment xml:lang="it">&lt;p style="margin-top: 0"&gt;&#xD;
+      sigilli raffiguranti demoni o creature mitiche (composte da parti di &#xD;
+      uomini e animali, oppure da sole parti umane ma con anomalie mostruose, &#xD;
+      e.g., un solo occhio)&#xD;
+    &lt;/p&gt;</rdfs:comment>
+    <rdfs:comment xml:lang="en">seal depicting mythical creatures or demons ( made up by human or animal parts or only by human part but with monstrous abnormalities, i.e. only one eye)</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="#AnthropomorphicBeings"/>
+  </owl:Class>
+  <owl:Class rdf:ID="FrontViewCharacter">
+    <rdfs:comment xml:lang="it">&lt;p style="margin-top: 0"&gt;&#xD;
+      sigilli raffiguranti almeno un essere antropomorfo raffigurato &#xD;
+      frontalmente (anche solo parzialmente)&#xD;
+    &lt;/p&gt;</rdfs:comment>
+    <rdfs:comment xml:lang="en">seal depicting at least one anthropomorphic being in full or partial front position</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="#AnthropomorphicBeings"/>
+  </owl:Class>
+  <owl:Class rdf:ID="SunSymbol">
+    <rdfs:subClassOf rdf:resource="#AstralSymbols"/>
+    <rdfs:comment xml:lang="it">&lt;p style="margin-top: 0"&gt;&#xD;
+      sigilli raffiguranti il simbolo astrale del sole&#xD;
+    &lt;/p&gt;</rdfs:comment>
+    <rdfs:comment xml:lang="en">seal depicting the sun</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:ID="NoEpigraphicDating">
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+          <owl:Class>
+            <owl:intersectionOf rdf:parseType="Collection">
+              <owl:Restriction>
+                <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+                >0</owl:hasValue>
+                <owl:onProperty>
+                  <owl:DatatypeProperty rdf:ID="epigraphicYear"/>
+                </owl:onProperty>
+              </owl:Restriction>
+              <owl:Restriction>
+                <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+                >0</owl:hasValue>
+                <owl:onProperty>
+                  <owl:DatatypeProperty rdf:ID="epigraphicDay"/>
+                </owl:onProperty>
+              </owl:Restriction>
+              <owl:Restriction>
+                <owl:onProperty>
+                  <owl:DatatypeProperty rdf:ID="epigraphicMonth"/>
+                </owl:onProperty>
+                <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+                >0</owl:hasValue>
+              </owl:Restriction>
+              <owl:Restriction>
+                <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+                >0</owl:hasValue>
+                <owl:onProperty>
+                  <owl:DatatypeProperty rdf:ID="epigraphicKing"/>
+                </owl:onProperty>
+              </owl:Restriction>
+            </owl:intersectionOf>
+          </owl:Class>
+          <owl:Class rdf:about="#Text"/>
+        </owl:intersectionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+    <rdfs:comment xml:lang="it">&lt;p style="margin-top: 0"&gt;&#xD;
+      tavolette senza datazione epigrafica&#xD;
+    &lt;/p&gt;</rdfs:comment>
+    <rdfs:comment xml:lang="en">tablet without epigraphic dating</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:ID="SittingCharacter">
+    <rdfs:subClassOf rdf:resource="#AnthropomorphicBeings"/>
+    <rdfs:comment xml:lang="it">&lt;p style="margin-top: 0"&gt;&#xD;
+      sigilli raffiguranti almeno un essere antropomorfo seduto&#xD;
+    &lt;/p&gt;</rdfs:comment>
+    <rdfs:comment xml:lang="en">seal depicting at least one sitting anthropomorphic being</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="#Stamp">
+    <owl:disjointWith rdf:resource="#Roller"/>
+    <owl:disjointWith rdf:resource="#Prism"/>
+    <rdfs:comment xml:lang="en">stamp find</rdfs:comment>
+    <owl:disjointWith rdf:resource="#FlatSquare"/>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#Barrel"/>
+    </owl:disjointWith>
+    <rdfs:comment xml:lang="it">&lt;p style="margin-top: 0"&gt;&#xD;
+      reperti a forma di stampo&#xD;
+    &lt;/p&gt;</rdfs:comment>
+    <owl:disjointWith rdf:resource="#FlatRectangle"/>
+    <owl:disjointWith rdf:resource="#Cylinder"/>
+    <owl:disjointWith rdf:resource="#TruncatedCone"/>
+    <owl:disjointWith rdf:resource="#Tag"/>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#FlatCircle"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#Parallelepiped"/>
+    </owl:disjointWith>
+    <owl:disjointWith rdf:resource="#Cone"/>
+    <owl:disjointWith rdf:resource="#Label"/>
+    <rdfs:subClassOf rdf:resource="#Find"/>
+    <owl:disjointWith rdf:resource="#Handle"/>
+  </owl:Class>
+  <owl:Class rdf:ID="AnimalsInTouchWithAnimals">
+    <rdfs:subClassOf rdf:resource="#Animals"/>
+    <rdfs:comment xml:lang="it">&lt;p style="margin-top: 0"&gt;&#xD;
+      sigilli raffiguranti animali a contatto tra loro&#xD;
+    &lt;/p&gt;</rdfs:comment>
+    <rdfs:comment xml:lang="en">seal depicting animals in touch with animals</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="#Parallelepiped">
+    <rdfs:comment xml:lang="it">&lt;p style="margin-top: 0"&gt;&#xD;
+      reperti a forma di parallelepipedo (prisma a quattro facce)&#xD;
+    &lt;/p&gt;</rdfs:comment>
+    <owl:disjointWith rdf:resource="#Handle"/>
+    <owl:disjointWith rdf:resource="#FlatRectangle"/>
+    <owl:disjointWith rdf:resource="#TruncatedCone"/>
+    <rdfs:comment xml:lang="en">parallelepiped find ( a four-faces prism)</rdfs:comment>
+    <owl:disjointWith rdf:resource="#Cone"/>
+    <owl:disjointWith rdf:resource="#FlatSquare"/>
+    <owl:disjointWith rdf:resource="#Cylinder"/>
+    <owl:disjointWith rdf:resource="#Roller"/>
+    <owl:disjointWith rdf:resource="#Tag"/>
+    <owl:disjointWith rdf:resource="#Prism"/>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#FlatCircle"/>
+    </owl:disjointWith>
+    <owl:disjointWith rdf:resource="#Label"/>
+    <owl:disjointWith rdf:resource="#Stamp"/>
+    <rdfs:subClassOf rdf:resource="#Find"/>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#Barrel"/>
+    </owl:disjointWith>
+  </owl:Class>
+  <owl:Class rdf:about="#AbradedSurface">
+    <owl:disjointWith rdf:resource="#UnabradedSurface"/>
+    <rdfs:subClassOf rdf:resource="#Text"/>
+    <rdfs:comment xml:lang="it">&lt;p style="margin-top: 0"&gt;&#xD;
+      reperti contenenti testo aventi la superficie abrasa&#xD;
+    &lt;/p&gt;</rdfs:comment>
+    <rdfs:comment xml:lang="en">find containing text having abraded surface</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:ID="Gold">
+    <rdfs:subClassOf rdf:resource="#Find"/>
+    <rdfs:comment xml:lang="it">&lt;p style="margin-top: 0"&gt;&#xD;
+      reperti in oro&#xD;
+    &lt;/p&gt;</rdfs:comment>
+    <rdfs:comment xml:lang="en">gold find</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:ID="MonstersInTouchWithMonsters">
+    <rdfs:comment xml:lang="it">&lt;p style="margin-top: 0"&gt;&#xD;
+      sigilli raffiguranti mostri a contatto tra loro&#xD;
+    &lt;/p&gt;</rdfs:comment>
+    <rdfs:comment xml:lang="en">seal depicting monsters in touch with monsters</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="#Monsters"/>
+  </owl:Class>
+  <owl:Class rdf:ID="MonstersInHeraldicMotif">
+    <rdfs:comment xml:lang="it">&lt;p style="margin-top: 0"&gt;&#xD;
+      sigilli raffiguranti mostri in motivo araldico&#xD;
+    &lt;/p&gt;</rdfs:comment>
+    <rdfs:comment xml:lang="en">seal depicting monster in heraldic motif</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="#Monsters"/>
+  </owl:Class>
+  <owl:Class rdf:ID="CharactersFacingOrInHeraldicMotif">
+    <rdfs:subClassOf rdf:resource="#AnthropomorphicBeings"/>
+    <rdfs:comment xml:lang="en">seal depicting at least a couple of anthropomorphic beings each opposite the other or a couple of anthropomorphic beings in heraldic motif</rdfs:comment>
+    <rdfs:comment xml:lang="it">&lt;p style="margin-top: 0"&gt;&#xD;
+      sigilli raffiguranti almeno una coppia di esseri antropomorfi affrontati &#xD;
+      o in motivo araldico&#xD;
+    &lt;/p&gt;</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:ID="FingerPrints">
+    <rdfs:subClassOf rdf:resource="#Tablet"/>
+    <rdfs:comment xml:lang="it">&lt;p style="margin-top: 0"&gt;&#xD;
+      tavolette aventi impronte digitali impresse sopra&#xD;
+    &lt;/p&gt;</rdfs:comment>
+    <rdfs:comment xml:lang="en">tablet having fringerprints</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:ID="Envelope">
+    <rdfs:comment xml:lang="it">&lt;p style="margin-top: 0"&gt;&#xD;
+      busta in cui viene racchiusa la tavoletta&#xD;
+    &lt;/p&gt;</rdfs:comment>
+    <rdfs:comment xml:lang="en">envelope enclosing the tablet</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="#Tablet"/>
+  </owl:Class>
+  <owl:Class rdf:ID="VegetalElementsInTouchWithAnthropomorphicBeings">
+    <rdfs:comment xml:lang="it">&lt;p style="margin-top: 0"&gt;&#xD;
+      sigilli raffiguranti elementi vegetali in contatto con esseri &#xD;
+      antropomorfi (ovvero raffiguranti esseri antropomorfi in contatto con &#xD;
+      elementi vegetali)&#xD;
+    &lt;/p&gt;</rdfs:comment>
+    <rdfs:comment xml:lang="en">seal depicting vegetal elements in touch with anthropomorphic beings (that is, seal depicting anthropomorphic beings in touch with vegetal elements)</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="#VegetalElements"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Tin">
+    <rdfs:subClassOf rdf:resource="#Find"/>
+    <rdfs:comment xml:lang="it">&lt;p style="margin-top: 0"&gt;&#xD;
+      reperti in stagno&#xD;
+    &lt;/p&gt;</rdfs:comment>
+    <rdfs:comment xml:lang="en">tin find</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:ID="AnimalsInTouchWithAnthropomorphicBeings">
+    <rdfs:subClassOf rdf:resource="#Animals"/>
+    <rdfs:comment xml:lang="it">&lt;p style="margin-top: 0"&gt;&#xD;
+      sigilli raffiguranti animali in contatto con esseri antropomorfi (ovvero &#xD;
+      raffiguranti esseri antropomorfi in contatto con animali)&#xD;
+    &lt;/p&gt;</rdfs:comment>
+    <rdfs:comment xml:lang="en">seal depicting animals in touch with anthropomorphic beings (that is, seal depicting anthropomorphic beings in touch with animals)</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="#Barrel">
+    <owl:disjointWith rdf:resource="#TruncatedCone"/>
+    <rdfs:comment xml:lang="en">barrel shaped find</rdfs:comment>
+    <owl:disjointWith rdf:resource="#Handle"/>
+    <owl:disjointWith rdf:resource="#Tag"/>
+    <owl:disjointWith rdf:resource="#FlatSquare"/>
+    <owl:disjointWith rdf:resource="#FlatRectangle"/>
+    <owl:disjointWith rdf:resource="#Label"/>
+    <owl:disjointWith rdf:resource="#Parallelepiped"/>
+    <owl:disjointWith rdf:resource="#Cylinder"/>
+    <rdfs:subClassOf rdf:resource="#Find"/>
+    <owl:disjointWith rdf:resource="#Roller"/>
+    <owl:disjointWith rdf:resource="#Cone"/>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#FlatCircle"/>
+    </owl:disjointWith>
+    <owl:disjointWith rdf:resource="#Stamp"/>
+    <owl:disjointWith rdf:resource="#Prism"/>
+    <rdfs:comment xml:lang="it">&lt;p style="margin-top: 0"&gt;&#xD;
+      reperti a fornma di barilotto&#xD;
+    &lt;/p&gt;</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:ID="Mantic">
+    <rdfs:subClassOf rdf:resource="#Text"/>
+    <rdfs:comment xml:lang="it">&lt;p style="margin-top: 0"&gt;&#xD;
+      genere di reperto scritto, in base al carattere del testo &#xD;
+    &lt;/p&gt;</rdfs:comment>
+    <rdfs:comment xml:lang="en">kind of written find</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:ID="TextRows">
+    <rdfs:comment xml:lang="it">&lt;p style="margin-top: 0"&gt;&#xD;
+      reperti contenenti testo che presentano righe nel testo&#xD;
+    &lt;/p&gt;</rdfs:comment>
+    <rdfs:comment xml:lang="en">find containing text with lines in the text</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="#Text"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Stone">
+    <rdfs:subClassOf rdf:resource="#Find"/>
+    <rdfs:comment xml:lang="it">&lt;p style="margin-top: 0"&gt;&#xD;
+      reperti in pietra&#xD;
+    &lt;/p&gt;</rdfs:comment>
+    <rdfs:comment xml:lang="en">stone find</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:ID="AscendingPositionCharacter">
+    <rdfs:comment xml:lang="it">&lt;p style="margin-top: 0"&gt;&#xD;
+      sigilli raffiguranti almeno un essere antropomorfo in posizione &#xD;
+      ascendente&#xD;
+    &lt;/p&gt;</rdfs:comment>
+    <rdfs:comment xml:lang="en">seal depicting at least one anthropomorphic being in ascending position</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="#AnthropomorphicBeings"/>
+  </owl:Class>
+  <owl:Class rdf:ID="LyingDownCharacter">
+    <rdfs:comment xml:lang="it">&lt;p style="margin-top: 0"&gt;&#xD;
+      sigilli raffiguranti almeno un essere antropomorfo sdraiato&#xD;
+    &lt;/p&gt;</rdfs:comment>
+    <rdfs:comment xml:lang="en">seal depicting at least one lying down anthropomorphic being</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="#AnthropomorphicBeings"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Literary">
+    <rdfs:comment xml:lang="it">&lt;p style="margin-top: 0"&gt;
+      genere di reperto scritto, in base al carattere del testo 
+    &lt;/p&gt;</rdfs:comment>
+    <rdfs:comment xml:lang="en">kind of written find</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="#Text"/>
+  </owl:Class>
+  <owl:Class rdf:about="#SameCurvature">
+    <rdfs:comment xml:lang="it">&lt;p style="margin-top: 0"&gt;&#xD;
+      tavolette aventi la stessa bombatura tra recto e verso (i.e., &#xD;
+      dritto-dritto o bombato-bombato)&#xD;
+    &lt;/p&gt;</rdfs:comment>
+    <rdfs:comment xml:lang="en">tablet with samet curvatures between recto and verso (i.e, right-right or convex-convex)</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="#Tablet"/>
+    <owl:disjointWith rdf:resource="#DifferentCurvatures"/>
+  </owl:Class>
+  <owl:Class rdf:about="#ClearCorners">
+    <rdfs:comment xml:lang="it">&lt;p style="margin-top: 0"&gt;&#xD;
+      tavolette aventi angoli netti&#xD;
+    &lt;/p&gt;</rdfs:comment>
+    <rdfs:comment xml:lang="en">clear corners tablet</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="#Tablet"/>
+    <owl:disjointWith rdf:resource="#SmoothCorners"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Clay">
+    <rdfs:comment xml:lang="en">clay find</rdfs:comment>
+    <rdfs:comment xml:lang="it">&lt;p style="margin-top: 0"&gt;&#xD;
+      reperti in argilla&#xD;
+    &lt;/p&gt;</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="#Find"/>
+  </owl:Class>
+  <owl:Class rdf:about="#FlatCircle">
+    <owl:disjointWith rdf:resource="#TruncatedCone"/>
+    <owl:disjointWith rdf:resource="#Cone"/>
+    <owl:disjointWith rdf:resource="#Tag"/>
+    <owl:disjointWith rdf:resource="#Stamp"/>
+    <owl:disjointWith rdf:resource="#Handle"/>
+    <rdfs:comment xml:lang="it">&lt;p style="margin-top: 0"&gt;&#xD;
+      reperti a forma di tavoletta circolare&#xD;
+    &lt;/p&gt;</rdfs:comment>
+    <owl:disjointWith rdf:resource="#FlatRectangle"/>
+    <owl:disjointWith rdf:resource="#Roller"/>
+    <owl:disjointWith rdf:resource="#Parallelepiped"/>
+    <owl:disjointWith rdf:resource="#Prism"/>
+    <owl:disjointWith rdf:resource="#Cylinder"/>
+    <rdfs:subClassOf rdf:resource="#Find"/>
+    <owl:disjointWith rdf:resource="#Label"/>
+    <rdfs:comment xml:lang="en">flat circle find</rdfs:comment>
+    <owl:disjointWith rdf:resource="#Barrel"/>
+    <owl:disjointWith rdf:resource="#FlatSquare"/>
+  </owl:Class>
+  <owl:Class rdf:ID="GeometricSymbols">
+    <rdfs:subClassOf rdf:resource="#Seal"/>
+    <rdfs:comment xml:lang="it">&lt;p style="margin-top: 0"&gt;&#xD;
+      sigilli raffiguranti simboli geometrici&#xD;
+    &lt;/p&gt;</rdfs:comment>
+    <rdfs:comment xml:lang="en">seal depicting geometric symbols</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:ID="GuidingCharacter">
+    <rdfs:comment xml:lang="it">&lt;p style="margin-top: 0"&gt;&#xD;
+      sigilli raffiguranti almeno un essere antropomorfo che ne conduce un &#xD;
+      altro&#xD;
+    &lt;/p&gt;</rdfs:comment>
+    <rdfs:comment xml:lang="en">seal depicting at least one anthropomorphic being who leads another</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="#AnthropomorphicBeings"/>
+  </owl:Class>
+  <owl:DatatypeProperty rdf:about="#epigraphicMonth">
+    <rdfs:comment xml:lang="it">&lt;p style="margin-top: 0"&gt;&#xD;
+      datazione epigrafica di un reperto: mese&#xD;
+    &lt;/p&gt;</rdfs:comment>
+    <rdfs:comment xml:lang="re">epigraphic dating of a find: month</rdfs:comment>
+    <rdfs:domain rdf:resource="#Text"/>
+    <rdfs:subPropertyOf>
+      <owl:DatatypeProperty rdf:about="#epigraphicDating"/>
+    </rdfs:subPropertyOf>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="archeologicalProvenience">
+    <rdfs:comment xml:lang="it">&lt;p style="margin-top: 0"&gt;&#xD;
+      provenienza archeologica di un reperto (i.e., area geografica)&#xD;
+    &lt;/p&gt;</rdfs:comment>
+    <rdfs:comment xml:lang="en">archeological provenience of a find (i.e geographical area)</rdfs:comment>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="#Find"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="collectionID">
+    <rdfs:comment xml:lang="en">code of the collection to which a find belongs (i.e. date and a short name)</rdfs:comment>
+    <rdfs:comment xml:lang="it">&lt;p style="margin-top: 0"&gt;&#xD;
+      codice della collezione di cui fa parte il reperto (e.g., data e sigla)&#xD;
+    &lt;/p&gt;</rdfs:comment>
+    <rdfs:domain rdf:resource="#Find"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="#epigraphicDay">
+    <rdfs:domain rdf:resource="#Text"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    <rdfs:comment xml:lang="it">&lt;p style="margin-top: 0"&gt;&#xD;
+      datazione epigrafica di un reperto: giorno&#xD;
+    &lt;/p&gt;</rdfs:comment>
+    <rdfs:comment xml:lang="en">epigraphic dating of a find: day</rdfs:comment>
+    <rdfs:subPropertyOf>
+      <owl:DatatypeProperty rdf:about="#epigraphicDating"/>
+    </rdfs:subPropertyOf>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="referencedDates">
+    <rdfs:comment xml:lang="en">dates mentioned in the text of a find</rdfs:comment>
+    <rdfs:comment xml:lang="it">&lt;p style="margin-top: 0"&gt;&#xD;
+      date citate nel testo di un reperto (in formato re anno mese giorno)&#xD;
+    &lt;/p&gt;</rdfs:comment>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="#Text"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="registers">
+    <rdfs:domain rdf:resource="#Seal"/>
+    <rdfs:comment xml:lang="it">&lt;p style="margin-top: 0"&gt;&#xD;
+      numero di registri in un sigillo&#xD;
+    &lt;/p&gt;</rdfs:comment>
+    <rdfs:comment xml:lang="en">number of registers in a seal</rdfs:comment>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="astralSymbolsTypes">
+    <rdfs:domain rdf:resource="#AstralSymbols"/>
+    <rdfs:comment xml:lang="it">&lt;p style="margin-top: 0"&gt;&#xD;
+      tipi di simboli astrali presenti in un sigillo (pianeti, etc.)&#xD;
+    &lt;/p&gt;</rdfs:comment>
+    <rdfs:comment xml:lang="en">astral symbols types present in a seal (planets, etc.)</rdfs:comment>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="epigraphicProvenience">
+    <rdfs:comment xml:lang="it">&lt;p style="margin-top: 0"&gt;&#xD;
+      provenienza epigrafica di un reperto (e.g., citta')&#xD;
+    &lt;/p&gt;</rdfs:comment>
+    <rdfs:comment xml:lang="en">epigraphic provenience of a find (i.e. city)</rdfs:comment>
+    <rdfs:domain rdf:resource="#Text"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="museumID">
+    <rdfs:domain rdf:resource="#Find"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:comment xml:lang="en">code of the museum where a find is located (e.g. BM for the British Museum)</rdfs:comment>
+    <rdfs:comment xml:lang="it">&lt;p style="margin-top: 0"&gt;&#xD;
+      codice del museo in cui si trova il reperto (e.g., BM per il British &#xD;
+      Museum)&#xD;
+    &lt;/p&gt;</rdfs:comment>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="#epigraphicKing">
+    <rdfs:subPropertyOf>
+      <owl:DatatypeProperty rdf:about="#epigraphicDating"/>
+    </rdfs:subPropertyOf>
+    <rdfs:domain rdf:resource="#Text"/>
+    <rdfs:comment xml:lang="en">epigraphic dating of a find: name of the king</rdfs:comment>
+    <rdfs:comment xml:lang="it">&lt;p style="margin-top: 0"&gt;&#xD;
+      datazione epigrafica di un reperto: nome del re&#xD;
+    &lt;/p&gt;</rdfs:comment>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="columnsRecto">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    <rdfs:comment xml:lang="it">&lt;p style="margin-top: 0"&gt;&#xD;
+      numero di colonne nel testo sul recto di una tavoletta (1 vuol dire &#xD;
+      assenza di colonne)&#xD;
+    &lt;/p&gt;</rdfs:comment>
+    <rdfs:comment xml:lang="en">columns number in a text on the recto of a tablet (1 means absence of columns)</rdfs:comment>
+    <rdfs:domain rdf:resource="#Tablet"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="columnsVerso">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    <rdfs:domain rdf:resource="#Tablet"/>
+    <rdfs:comment xml:lang="it">&lt;p style="margin-top: 0"&gt;&#xD;
+      numero di colonne nel testo sul verso di una tavoletta (1 indica assenza &#xD;
+      di colonne, 0 indica assenza di testo sul verso)&#xD;
+    &lt;/p&gt;</rdfs:comment>
+    <rdfs:comment xml:lang="en">columns number in a text on the verso of a tablet (1 means absence of columns, 0 means absence of the text on the verso)</rdfs:comment>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="#epigraphicYear">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    <rdfs:comment xml:lang="it">&lt;p style="margin-top: 0"&gt;&#xD;
+      datazione epigrafica di un reperto: anno&#xD;
+    &lt;/p&gt;</rdfs:comment>
+    <rdfs:comment xml:lang="en">epigraphic dating of a find: year</rdfs:comment>
+    <rdfs:domain rdf:resource="#Text"/>
+    <rdfs:subPropertyOf>
+      <owl:DatatypeProperty rdf:about="#epigraphicDating"/>
+    </rdfs:subPropertyOf>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="columns">
+    <rdfs:comment xml:lang="en">number of columns in the text of a find (1 means absence of columuns. In case of prism etc. the columns number is the total of all faces)</rdfs:comment>
+    <rdfs:comment xml:lang="it">&lt;p style="margin-top: 0"&gt;&#xD;
+      numero di colonne nel testo di un reperto contenente testo (1 vuol dire &#xD;
+      assenza di colonne. Nel caso di prismi etc. il numero delle colonne e' il totale su tutte le facce)&#xD;
+    &lt;/p&gt;</rdfs:comment>
+    <rdfs:domain>
+      <owl:Class>
+        <owl:unionOf rdf:parseType="Collection">
+          <owl:Class rdf:about="#AbradedSurface"/>
+          <owl:Class rdf:about="#Administrative"/>
+          <owl:Class rdf:about="#Akkadian"/>
+          <owl:Class rdf:about="#BrokenEpigraphicDating"/>
+          <owl:Class rdf:about="#Elamitic"/>
+          <owl:Class rdf:about="#Historical"/>
+          <owl:Class rdf:about="#Legal"/>
+          <owl:Class rdf:about="#Literary"/>
+          <owl:Class rdf:about="#Mantic"/>
+          <owl:Class rdf:about="#NoEpigraphicDating"/>
+          <owl:Class rdf:about="#OtherLanguages"/>
+          <owl:Class rdf:about="#Scholastic"/>
+          <owl:Class rdf:about="#Sealed"/>
+          <owl:Class rdf:about="#Sumerian"/>
+          <owl:Class rdf:about="#TextRows"/>
+          <owl:Class rdf:about="#UnabradedSurface"/>
+        </owl:unionOf>
+      </owl:Class>
+    </rdfs:domain>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="findID">
+    <rdfs:comment xml:lang="it">&lt;p style="margin-top: 0"&gt;&#xD;
+      codice del reperto all'interno del museo (e.g., codice di magazzino)&#xD;
+    &lt;/p&gt;</rdfs:comment>
+    <rdfs:comment xml:lang="en">find code in the museum (i.e., store code)</rdfs:comment>
+    <rdfs:domain rdf:resource="#Find"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="characters">
+    <rdfs:comment xml:lang="it">&lt;p style="margin-top: 0"&gt;&#xD;
+      numero di personaggi antropomorfi in un sigillo&#xD;
+    &lt;/p&gt;</rdfs:comment>
+    <rdfs:comment xml:lang="en">number of anthropomorphic beings present in a seal</rdfs:comment>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    <rdfs:domain rdf:resource="#AnthropomorphicBeings"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="archeologicalDating">
+    <rdfs:domain rdf:resource="#Find"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:comment xml:lang="it">&lt;p style="margin-top: 0"&gt;&#xD;
+      datazione archeologica di un reperto (i.e., periodo storico)&#xD;
+    &lt;/p&gt;</rdfs:comment>
+    <rdfs:comment xml:lang="en">archeological dating of a find (i.e. historical period)</rdfs:comment>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="stoneTypes">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:comment xml:lang="it">&lt;p style="margin-top: 0"&gt;&#xD;
+      tipi di pietra di un reperto (diorite, alabastro, agata, cornalina, &#xD;
+      lapislazulo etc.)&#xD;
+    &lt;/p&gt;</rdfs:comment>
+    <rdfs:comment xml:lang="en">type of stone of a find</rdfs:comment>
+    <rdfs:domain rdf:resource="#Stone"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="notes">
+    <rdfs:domain rdf:resource="#Find"/>
+    <rdfs:comment xml:lang="en">additional notes inserted by the cataloguer</rdfs:comment>
+    <rdfs:comment xml:lang="it">&lt;p style="margin-top: 0"&gt;&#xD;
+      note aggiuntive inserite dal catalogatore&#xD;
+    &lt;/p&gt;</rdfs:comment>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="width">
+    <rdfs:comment xml:lang="it">&lt;p style="margin-top: 0"&gt;&#xD;
+      larghezza di un reperto, in mm&#xD;
+    &lt;/p&gt;</rdfs:comment>
+    <rdfs:comment xml:lang="en">width of a find, in mm</rdfs:comment>
+    <rdfs:domain rdf:resource="#Find"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="#epigraphicDating">
+    <rdfs:domain rdf:resource="#Text"/>
+    <rdfs:comment xml:lang="it">&lt;p style="margin-top: 0"&gt;&#xD;
+      datazione epigrafica di un reperto&#xD;
+    &lt;/p&gt;</rdfs:comment>
+    <rdfs:comment xml:lang="en">epigraphic dating of a find</rdfs:comment>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="faces">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    <rdfs:domain rdf:resource="#Prism"/>
+    <rdfs:comment xml:lang="it">&lt;p style="margin-top: 0"&gt;&#xD;
+      numero di facce di un prisma (un parallelepipedo e' un prisma a quattro &#xD;
+      facce, ma potrebbe esserci anche un prisma a tre facce)&#xD;
+    &lt;/p&gt;</rdfs:comment>
+    <rdfs:comment xml:lang="en">number of the faces of a prism (a parallelepiped is a prism with four faces, but there may be a three-faces prism)</rdfs:comment>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="lenght">
+    <rdfs:domain rdf:resource="#Find"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    <rdfs:comment xml:lang="it">&lt;p style="margin-top: 0"&gt;&#xD;
+      lunghezza di un reperto, in mm&#xD;
+    &lt;/p&gt;</rdfs:comment>
+    <rdfs:comment xml:lang="en">lenght of a find, in mm</rdfs:comment>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="height">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    <rdfs:domain rdf:resource="#Find"/>
+    <rdfs:comment xml:lang="it">&lt;p style="margin-top: 0"&gt;&#xD;
+      altezza di un reperto, in mm&#xD;
+    &lt;/p&gt;</rdfs:comment>
+    <rdfs:comment xml:lang="en">height of a find, in mm</rdfs:comment>
+  </owl:DatatypeProperty>
+  <owl:SymmetricProperty rdf:ID="join">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:range rdf:resource="#Text"/>
+    <rdfs:domain rdf:resource="#Text"/>
+    <rdfs:comment xml:lang="en">connection between two finds containing text that are part of one same larger find (i.e. two pieces of a tablet)</rdfs:comment>
+    <rdfs:comment xml:lang="it">&lt;p style="margin-top: 0"&gt;&#xD;
+      collegamento tra due reperti contenenti testo che fanno parte di uno &#xD;
+      stesso reperto piu' grande (i.e., due pezzi di una tavoletta)&#xD;
+    &lt;/p&gt;</rdfs:comment>
+    <owl:inverseOf rdf:resource="#join"/>
+  </owl:SymmetricProperty>
+  <owl:FunctionalProperty rdf:ID="id">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:domain rdf:resource="#Find"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    <rdfs:comment xml:lang="en">unique identifier of the find in the catalog (finds are assigned consecutive numbers at the time of creation, so that you can refer directly to a find).</rdfs:comment>
+    <rdfs:comment xml:lang="it">&lt;p style="margin-top: 0"&gt;&#xD;
+      identificatore univoco del reperto all'interno del catalogo (ai reperti &#xD;
+      vengono assegnati numeri progressivi al momento della creazione in modo &#xD;
+      tale da potersi riferire direttamente ad un reperto).&#xD;
+    &lt;/p&gt;</rdfs:comment>
+  </owl:FunctionalProperty>
+  <owl:FunctionalProperty rdf:ID="containedIn">
+    <rdfs:domain>
+      <owl:Class>
+        <owl:unionOf rdf:parseType="Collection">
+          <owl:Class rdf:about="#ClearCorners"/>
+          <owl:Class rdf:about="#DifferentCurvatures"/>
+          <owl:Class rdf:about="#FingernailPrints"/>
+          <owl:Class rdf:about="#FingerPrints"/>
+          <owl:Class rdf:about="#SameCurvature"/>
+          <owl:Class rdf:about="#SideBordersInscribed"/>
+          <owl:Class rdf:about="#SmoothCorners"/>
+        </owl:unionOf>
+      </owl:Class>
+    </rdfs:domain>
+    <rdfs:range rdf:resource="#Envelope"/>
+    <owl:inverseOf>
+      <owl:InverseFunctionalProperty rdf:ID="contains"/>
+    </owl:inverseOf>
+    <rdfs:comment xml:lang="en">connection between the envelope and the tablet which contained it</rdfs:comment>
+    <rdfs:comment xml:lang="it">&lt;p style="margin-top: 0"&gt;&#xD;
+      collegamento tra la tavoletta e la busta che la conteneva&#xD;
+    &lt;/p&gt;</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </owl:FunctionalProperty>
+  <owl:InverseFunctionalProperty rdf:about="#contains">
+    <rdfs:comment xml:lang="it">&lt;p style="margin-top: 0"&gt;&#xD;
+      collegamento tra la busta e la tavoletta che conteneva&#xD;
+    &lt;/p&gt;</rdfs:comment>
+    <rdfs:comment xml:lang="en">connection between the envelope and the tablet which contained</rdfs:comment>
+    <rdfs:domain rdf:resource="#Envelope"/>
+    <owl:inverseOf rdf:resource="#containedIn"/>
+    <rdfs:range>
+      <owl:Class>
+        <owl:unionOf rdf:parseType="Collection">
+          <owl:Class rdf:about="#ClearCorners"/>
+          <owl:Class rdf:about="#DifferentCurvatures"/>
+          <owl:Class rdf:about="#FingernailPrints"/>
+          <owl:Class rdf:about="#FingerPrints"/>
+          <owl:Class rdf:about="#SameCurvature"/>
+          <owl:Class rdf:about="#SideBordersInscribed"/>
+          <owl:Class rdf:about="#SmoothCorners"/>
+        </owl:unionOf>
+      </owl:Class>
+    </rdfs:range>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </owl:InverseFunctionalProperty>
+</rdf:RDF>
+
+<!-- CC BY-NC-ND 3.0 - 2013 Epistematica - some rights reserved -->
