@@ -91,7 +91,7 @@ Annex
 
 -------------------------------
 
-.. [#] Master degree in Philodophy
+.. [#] Master degree in Philosophy
 
 |
 |
